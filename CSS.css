@@ -1,0 +1,175 @@
+/* Apply a Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&family=Montserrat:wght@700&display=swap');
+
+/* General styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(to right, #56ccf2, #2f80ed); /* Blue gradient background */
+    color: #333; /* Dark text for readability */
+}
+
+h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Header and navigation styles */
+header {
+    background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent white */
+    padding: 1em;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adds shadow to the header */
+}
+
+header h1 {
+    font-family: 'Roboto Slab', serif; /* Fancy, serif font for headers */
+    font-size: 2.5em; /* Adjust size as needed */
+    font-weight: 700; /* 700 is for bold text */
+    margin-bottom: 0.5em;
+}
+
+header h2 {
+    font-family: 'Roboto Slab', serif; /* Fancy, serif font for headers */
+    font-size: 2.5em; /* Adjust size as needed */
+    font-weight: 700; /* 700 is for bold text */
+    margin-bottom: 0.5em;
+}
+
+header h3 {
+    font-family: 'Roboto Slab', serif; /* Fancy, serif font for headers */
+    font-size: 2.5em; /* Adjust size as needed */
+    font-weight: 700; /* 700 is for bold text */
+    margin-bottom: 0.5em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1em;
+    /* Encapsulate each link in a tab-like box */
+    background: #e3f2fd; /* Light blue background for tabs */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Navigation menu styling */
+nav ul li a {
+    font-family: 'Montserrat', sans-serif; /* Modern, sans-serif font for navigation */
+    font-size: 1em; /* Adjust size as needed */
+    font-weight: 700; /* Bold text for readability */
+    text-transform: uppercase; /* Uppercase text for a more structured look */
+    letter-spacing: 1px; /* Spacing for aesthetics */
+    text-decoration: none;
+    color: #2f80ed; /* Blue text to match the theme */
+    padding: 0.5em 1em;
+    display: block;
+    border: 2px solid transparent;
+    transition: color 0.3s, background-color 0.3s, transform 0.3s;
+}
+
+nav ul li:hover {
+    background: #2f80ed; /* Darker blue background on hover */
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    color: white; /* White text on hover/focus */
+    background-color: #56ccf2; /* Lighter blue background on hover */
+    transform: scale(1.1);
+}
+
+/* Add active class styles if needed */
+nav ul li a.active {
+    background-color: #2f80ed; /* Active tab has a different background */
+    color: white;
+    border-radius: 5px;
+}
+
+/* Additional hover effects for the header */
+header:hover {
+    background-color: #f8f8f8; /* Lighter background on hover */
+    /* Optional: Add a scaling effect
+    transform: scale(1.02);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    */
+}
+
+/* Homepage Intro Section */
+.intro {
+    text-align: center;
+    padding: 100px 20px;
+    background: rgba(255, 255, 255, 0.9);
+    margin-top: -20px; /* Overlap the header slightly */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transform: scale(1.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.intro:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #2f80ed;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s, box-shaow 0.3s;
+}
+
+.btn:hover {
+    background-color: #56ccf2;
+    transform: translateY(-3px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Section styles */
+section {
+    padding: 2em;
+    background-color: rgba(255, 255, 255, 0.85); /* Slightly transparent white */
+    margin: 1em auto; /* Centered horizontally */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 800px; /* Set a max width for content sections */
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    position: sticky;
+    bottom: 0;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+    nav ul li {
+        margin: 0.5em 0;
+    }
+}
+
+
+
