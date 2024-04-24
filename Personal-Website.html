@@ -10,11 +10,28 @@
     <header>
         <h1>Welcome to Matt Jerry's Education Hub</h1>
         <nav>
-            <ul>
-                <li><a href="courses.html">Courses</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="tutorials.html">Video Tutorials</a></li>
-            </ul>
+            <div class="nav-container">
+                <ul class="nav-list">
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="tutorials.html">Video Tutorials</a></li>
+                    <li><a href="sign-up.html">Sign Up</a></li>
+                    <li><a href="sign-in.html">Sign In</a></li>
+                </ul>
+                <ul class="profile-menu">
+                    <li class="profile-icon">
+                        <a href="#">
+                            <img src="profile-icon.png" alt="Profile">
+                            <div class="dropdown-content">
+                                <a href="profile-settings.html">Profile Settings</a>
+                                <a href="membership.html">Membership Settings</a>
+                                <a href="settings.html">General Settings</a>
+                                <a href="logout.php">Logout</a>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
 
@@ -24,10 +41,51 @@
             <p>Join me on a journey into the realms of logic and algorithms, and explore the beauty of mathematics and the power of computer programming.</p>
             <a href="courses.html" class="btn">Start Learning</a>
         </section>
+        <section id="courses-content">
+            <h2>Mathematics and Computer Science Courses</h2>
+            <p>Explore our extensive range of courses designed to help you master Mathematics and Computer Science, from beginner to advanced levels.</p>
+            <ul>
+                <li>Introduction to Programming</li>
+                <li>Advanced Data Structures</li>
+                <li>Mathematical Logic</li>
+            </ul>
+        </section>
+
+        <section id="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <h3>How do I purchase a course?</h3>
+                <p> Just navigate to the course of your interest and select the "purchase" option.</p>
+            </div>
+            <div class="faq-item">
+                <h3>What is the refund policy?</h3>
+                <p>Courses are a singular transaction, intended to enhance the intricate details of a given course; in conjuction with other academic works. Thus, they are rendered as non-refundable.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <h3>How do I cancel an Intricate Detail membership?</h3>
+            <p>Hover over the profile icon with the mouse curser, then select the "Membership" option. Finally, proceed by clicking on the "Cancel Membership" option.</p>
+        </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form action="submit_form.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
     </main>
 
     <footer>
         <p>Copyright © 2024 Matt Jerry</p>
+        <p>Privacy Policy</p>
     </footer>
 
     <script src="scripts.js"></script>

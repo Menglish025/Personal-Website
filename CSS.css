@@ -79,8 +79,90 @@ nav ul li a {
     transition: color 0.3s, background-color 0.3s, transform 0.3s;
 }
 
-nav ul li:hover {
-    background: #2f80ed; /* Darker blue background on hover */
+nav ul li:hover, nav ul li a:hover, nav ul li a:focus {
+    background-color: #56ccf2;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Form and Contact Section Styling */
+section#contact {
+    background-color: white;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+label {
+    font-weight: 600;
+}
+
+input[type="text"], input[type="email"], textarea {
+    padding: 0.8em;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+    border-color: #56ccf2;
+    outline: none;
+}
+
+button[type="submit"] {
+    background-color: #2f80ed;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #56ccf2;
+    transform: translateY(-2px);
+}
+
+/* Responsive and Accessibility Enhancements */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li, nav ul li a {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    position: sticky;
+    bottom: 0;
+}
+
+/* Utility and Enhancement Classes */
+.faq-item {
+    margin-top: 1em;
+    background: #f9f9f9;
+    padding: 1em;
+    border-left: 5px solid #2f80ed;
+    border-radius: 5px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.faq-item:hover {
+    transform: translateX(10px);
 }
 
 nav ul li a:hover,
@@ -92,9 +174,9 @@ nav ul li a:focus {
 
 /* Add active class styles if needed */
 nav ul li a.active {
-    background-color: #2f80ed; /* Active tab has a different background */
-    color: white;
-    border-radius: 5px;
+    background-color: #2f80ed !important;/* Active tab has a different background */
+    color: white !important;
+    border-radius: 5px !important;
 }
 
 /* Additional hover effects for the header */
@@ -171,5 +253,103 @@ footer {
     }
 }
 
+/* Profile Icon and Dropdown Menu Styles */
+.profile-icon {
+    position: relative;
+    display: inline-block;
+}
 
+
+.profile-icon a img {
+    vertical-align: middle;
+    width: 30px; /* Adjust as necessary */
+    height: 30px; /* Adjust as necessary */
+    border-radius: 50%;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.profile-icon:hover .dropdown-content {
+    display: block;
+}
+
+/* Sign Up and Sign In Links Styles */
+nav ul li a[href$="sign-up.html"],
+nav ul li a[href$="sign-in.html"] {
+    background: #e3f2fd; /* Light blue background for tabs */
+    color: #2f80ed; /* Blue text to match the theme */
+    padding: 0.5em 1em;
+    border: 2px solid transparent;
+    transition: color 0.3s, background-color 0.3s, transform 0.3s;
+}
+
+nav ul li a[href$="sign-up.html"]:hover,
+nav ul li a[href$="sign-in.html"]:hover {
+     background-color: #56ccf2; /* Lighter blue background on hover */
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Ensuring the dropdown is not affected by the profile image size */
+.dropdown-content a {
+    white-space: nowrap;
+}
+
+/* Form Styling */
+#sign-up-form {
+    max-width: 500px;
+    margin: 2em auto;
+    padding: 1em;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 1em;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+    width: 100%; /* Makes input fields take up 100% of their parent's width */
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group .btn {
+    width: 100%;
+    padding: 0.5em;
+    background-color: #2f80ed;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-group .btn:hover {
+    background-color: #56ccf2;
+}
 
