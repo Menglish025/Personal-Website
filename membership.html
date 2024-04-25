@@ -8,19 +8,76 @@
 </head>
 <body>
     <header>
-        <!-- Header content -->
+         <!-- Header content -->
+         <h1>Membership Settings</h1>
+         <nav>
+             <ul class="nav-list">
+                 <li><a href="Personal-Website.html">Home</a></li>
+                 <li><a href="courses.html">Courses</a></li>
+                 <li><a href="about.html">About Me</a></li>
+                 <li><a href="tutorials.html">Video Tutorials</a></li>
+                 <li><a href="sign-up.html">Sign Up</a></li>
+                 <li><a href="sign-in.html">Sign In</a></li>
+                 <li class="active"><a href="settings.html">Settings</a></li> 
+             </ul>
+         </nav>
     </header>
     
     <main>
         <section id="membership">
             <h2>Membership Details</h2>
             <!-- Content related to membership plans and user subscriptions -->
+            <div class="membership-plans">
+                <div class="membership-plan">
+                    <h3>Basic Plan</h3>
+                    <p>Get access to a selection of video tutorials and sample content from our courses.</p>
+                    <ul>
+                        <li>Access to selected video tutorials</li>
+                        <li>Sample content from intricate courses</li>
+                        <li>Limited support</li>
+                    </ul>
+                    <button>Upgrade</button>
+                </div>
+                <div class="membership-plan">
+                    <h3>Premium Plan</h3>
+                    <p>Unlock the full potential of our platform with access to all video tutorials and intricate courses.</p>
+                    <ul>
+                        <li>Access to all video tutorials</li>
+                        <li>Full access to intricate courses</li>
+                        <li>Priority support</li>
+                    </ul>
+                    <button>Upgrade</button>
+                </div>
+            </div>
+            <div class="user-subscription">
+                <h3>Your Current Subscription</h3>
+                <p>You are currently subscribed to the Premium Plan.</p>
+                <button onclick="openSubscriptionModal()">Manage Subscription</button>
+            </div>
         </section>
     </main>
+
+    <!-- Subscription Management Modal -->
+    <div id="subscription-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Manage Subscription</h2>
+            <!-- Subscription management form -->
+            <form id="subscription-form">
+                <label for="subscription-type">Subscription Type:</label>
+                <select id="subscription-type" name="subscription-type">
+                    <option value="basic">Basic</option>
+                    <option value="premium">Premium</option>
+                </select>
+                <button type="submit">Update Subscription</button>
+            </form>
+        </div>
+    </div>
     
     <footer>
         <p>Copyright © 2024 Matt Jerry</p>
         <p>Privacy Policy</p>
     </footer>
+    <script src="Javascript.js"></script>
 </body>
 </html>

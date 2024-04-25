@@ -10,4 +10,4 @@ if (isset($_SESSION['user_id'])) {
 // Redirect to the sign-in page or home page after logging out
 header('Location: sign-in.html');
 exit;
-?>
+

@@ -9,12 +9,34 @@
 <body>
     <header>
         <!-- Header content -->
+        <h1>Settings</h1>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="Personal-Website.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="tutorials.html">Video Tutorials</a></li>
+                <li><a href="sign-up.html">Sign Up</a></li>
+                <li><a href="sign-in.html">Sign In</a></li>
+            </ul>
+        </nav>
     </header>
     
     <main>
         <section id="settings">
             <h2>General Settings</h2>
-            <!-- General user settings form and options -->
+            <form id="settings-form">
+                <div class="setting-option">
+                    <label class="switch">
+                        <input type="checkbox" id="dark-mode">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <!-- Additional settings options -->
+                <div class="setting-option">
+                    <button type="submit" class="btn">Save Settings</button>
+                </div>
+            </form>
         </section>
     </main>
     
@@ -22,5 +44,6 @@
         <p>Copyright © 2024 Matt Jerry</p>
         <p>Privacy Policy</p>
     </footer>
+    <script src="Javascript.js"></script>
 </body>
 </html>
