@@ -1,0 +1,7 @@
+{
+    "require": {
+        "square/square": "^37.0",
+        "paypal/rest-api-sdk-php": "^1.6",
+        "stripe/stripe-php": "^14.7"
+    }
+}

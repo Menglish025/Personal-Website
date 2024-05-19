@@ -11,30 +11,95 @@
         <h1>Courses</h1>
         <nav>
             <ul>
-                <li><a href="Personal-Website.html">Home</a></li>
-                <li><a href="courses.html" class="active">Courses</a></li>
+                <li><a href="homepage.php">Home</a></li>
+                <li><a href="courses.php" class="active">Courses</a></li>
                 <li><a href="about.html">About Me</a></li>
-                <li><a href="tutorials.html">Video Tutorials</a></li>
-                <li><a href="sign-up.html">Sign Up</a></li>
-                <li><a href="sign-in.html">Sign In</a></li>
+                <li><a href="tutorials.php">Video Tutorials</a></li>
+                <li><a href="sign-up.php">Sign Up</a></li>
+                <li><a href="sign-in.php">Sign In</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="courses-content">
-            <h2>Mathematics and Computer Science Courses</h2>
-            <!-- Dynamic content will be loaded here -->
-            <!-- Content specific to the Courses section -->
+        <section id="programming-courses">
+            <h2>Programming Language Courses</h2>
+            <!-- Python Programming -->
+            <div class="course-section">
+                <h3>Python Programming - $399</h3>
+                <p>Master Python from the basics to advanced data manipulation and analysis techniques.</p>
+                <!-- Course details omitted for brevity -->
+                <button type="submit" onclick="purchaseCourse('Python Programming', 399)" style="width:100%;">Purchase Python</button>
+            </div>
+            
+            <!-- Web Development -->
+            <div class="course-section">
+                <h3>Web Development - $499</h3>
+                <p>Comprehensive course covering front-end and back-end development skills.</p>
+                <!-- Course details omitted for brevity -->
+                <button type="submit" onclick="purchaseCourse('Web Development', 499)" style="width:100%;">Purchase Web Dev</button>
+            </div>
+            
+            <!-- Advanced Programming Languages -->
+            <div class="course-section">
+                <h3>Advanced Programming Languages - $599</h3>
+                <p>Deep dive into back-end development and system programming with Java and C++.</p>
+                <!-- Course details omitted for brevity -->
+                <button type="submit" onclick="purchaseCourse('Advanced Programming Languages', 599)" style="width:100%;">Purchase Advanced</button>
+            </div>
+            
+            <!-- Bundle Discount Offer -->
+            <div class="course-bundle">
+                <h3>Bundle Offer: All Programming Courses - $1299</h3>
+                <p>Purchase all three courses in a bundle and save $198!</p>
+                <button type="submit" onclick="purchaseCourse('All Programming Courses Bundle', 1299)" style="width:100%;">Purchase Bundle</button>
+            </div>
         </section>
 
-      
+        <section id="mathematics-courses">
+            <h2>Mathematics Courses</h2>
+            <!-- Linear Algebra -->
+            <div class="course-section">
+                <h3>Linear Algebra - $249</h3>
+                <p>Explore vector spaces, linear transformations, eigenvalues, and eigenvectors.</p>
+                <button type="submit" onclick="purchaseCourse('Linear Algebra', 249)" style="width:100%;">Purchase Linear Algebra</button>
+            </div>
+        
+            <!-- Calculus I, II, III, and IV -->
+            <div class="course-section">
+                <h3>Calculus Series - $349</h3>
+                <p>Master everything from limits and derivatives to integral calculus and series.</p>
+                <button type="submit" onclick="purchaseCourse('Calculus Series', 349)" style="width:100%;">Purchase Calculus Series</button>
+            </div>
+        
+            <!-- Ordinary Differential Equations -->
+            <div class="course-section">
+                <h3>Ordinary Differential Equations - $199</h3>
+                <p>Learn to solve differential equations that model real-world phenomena.</p>
+                <button type="submit" onclick="purchaseCourse('Ordinary Differential Equations', 199)" style="width:100%;">Purchase ODEs</button>
+            </div>
+        
+            <!-- Partial Differential Equations -->
+            <div class="course-section">
+                <h3>Partial Differential Equations - $299</h3>
+                <p>Understand the techniques to solve PDEs, crucial for modeling multi-variable systems.</p>
+                <button type="submit" onclick="purchaseCourse('Partial Differential Equations', 299)" style="width:100%;">Purchase PDEs</button>
+            </div>
+        
+            <!-- Bundle Discount Offer -->
+            <div class="course-bundle">
+                <h3>Complete Mathematics Package - $899</h3>
+                <p>Purchase all mathematics courses in a bundle and save $197!</p>
+                <button type="submit" onclick="purchaseCourse('Complete Mathematics Package', 899)" style="width:100%;">Purchase Math Package</button>
+            </div>
+        </section>
     </main>
     </main>
 
     <footer>
-        <p>Copyright © 2024 Matt Jerry</p>
-        <p>Privacy Policy</p>
+        <p><a href="copyright.html">Copyright © 2024 Matt Jerry</a></p>
+        <p><a href="terms.html">Terms Of Service<a/></p>
+        <p><a href="privacypolicy.html">Privacy Policy</a></p>
     </footer>
 
     <script src="Javascript.js"></script>

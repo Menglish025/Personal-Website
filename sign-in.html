@@ -11,12 +11,12 @@
         <h1>Sign In</h1>
         <nav>
             <ul class="nav-list">
-                <li><a href="Personal-Website.html">Home</a></li>
-                <li><a href="courses.html">Courses</a></li>
+                <li><a href="homepage.php">Home</a></li>
+                <li><a href="courses.php">Courses</a></li>
                 <li><a href="about.html">About Me</a></li>
-                <li><a href="tutorials.html">Video Tutorials</a></li>
-                <li><a href="sign-up.html">Sign Up</a></li>
-                <li><a href="sign-in.html" class="active">Sign In</a></li>
+                <li><a href="tutorials.php">Video Tutorials</a></li>
+                <li><a href="sign-up.php">Sign Up</a></li>
+                <li><a href="sign-in.php" class="active">Sign In</a></li>
             </ul>
             <!-- The profile icon could go here if the user is signed in -->
         </nav>
@@ -34,6 +34,10 @@
                 <div class="form-group">
                     <label for="password">Password:</label>
                     <input type="password" id="password" name="password" required>
+                    <!-- Display error message if present -->
+                    <?php if ($login_error): ?>
+                        <div class="error"><?php echo $login_error; ?></div>
+                    <?php endif; ?>
                 </div>
                 
                 <div class="form-group">
@@ -44,8 +48,9 @@
     </main>
     
     <footer>
-        <p>Copyright © 2024 Matt Jerry</p>
-        <p>Privacy Policy</p>
+        <p><a href="copyright.html">Copyright © 2024 Matt Jerry</a></p>
+        <p><a href="terms.html">Terms Of Service<a/></p>
+        <p><a href="privacypolicy.html">Privacy Policy</a></p>
     </footer>
 
     <script src="Javascript.js"></script>

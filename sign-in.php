@@ -1,0 +1,70 @@
+<?php
+session_start(); // Start the session at the very beginning
+
+// Check for an error message in the session
+$login_error = '';
+if (isset($_SESSION['login_error'])) {
+    $login_error = $_SESSION['login_error'];
+    unset($_SESSION['login_error']); // Clear the error message from the session
+}
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - Matt Jerry's Education Hub</title>
+    <link rel="stylesheet" href="CSS.css">
+</head>
+<body>
+    <header>
+        <h1>Sign In</h1>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="homepage.php">Home</a></li>
+                <li><a href="courses.php">Courses</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="tutorials.php">Video Tutorials</a></li>
+                <li><a href="sign-up.php">Sign Up</a></li>
+                <li><a href="sign-in.php" class="active">Sign In</a></li>
+            </ul>
+            <!-- The profile icon could go here if the user is signed in -->
+        </nav>
+    </header>
+    
+    <main>
+        <section id="sign-in-form">
+            <h2>Sign In</h2>
+            <form action="sign-in-process.php" method="post">
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                    <!-- Display error message if present -->
+                    <?php if (isset($login_error) && $login_error): ?>
+                        <div class="error"><?php echo $login_error; ?></div>
+                    <?php endif; ?>
+                </div>
+                
+                <div class="form-group">
+                    <button type="submit" class="btn">Sign In</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <p><a href="copyright.html">Copyright © 2024 Matt Jerry</a></p>
+        <p><a href="terms.html">Terms Of Service<a/></p>
+        <p><a href="privacypolicy.html">Privacy Policy</a></p>
+    </footer>
+
+    <script src="Javascript.js"></script>
+</body>
+</html>

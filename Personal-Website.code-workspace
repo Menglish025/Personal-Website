@@ -1,9 +1,47 @@
 {
-	"folders": [
-		{
-			"name": "Personal-Website",
-			"path": "."
-		}
-	],
-	"settings": {}
+    "folders": [
+        {
+            "name": "Personal-Website",
+            "path": "."
+        }
+    ],
+    "settings": {
+        "editor.tabSize": 2,
+        "html.format.wrapLineLength": 80,
+        "editor.rulers": [80, 120],
+        "files.exclude": {
+            "**/.git": true,
+            "**/.DS_Store": true,
+            "**/node_modules": true
+        },
+        "files.associations": {
+            "*.html": "html",
+            "*.js": "javascript"
+        }
+    },
+    "extensions": {
+        "recommendations": [
+            "esbenp.prettier-vscode",
+            "dbaeumer.vscode-eslint",
+            "eg2.vscode-npm-script"
+        ]
+    },
+    "tasks": {
+        "version": "2.0.0",
+        "tasks": [
+            {
+                "label": "Build",
+                "type": "shell",
+                "command": "npm run build",
+                "group": {
+                    "kind": "build",
+                    "isDefault": true
+                }
+            }
+        ]
+    },
+    "launch": {
+        "configurations": [],
+        "compounds": []
+    }
 }
